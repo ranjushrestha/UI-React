@@ -1,10 +1,12 @@
 import React from 'react'
 import RightCard from './RightCard'
 
-const RightContent = () => {
+const RightContent = ({users}) => {
   return (
-    <div className='h-full w-3/4  px-6 py-4'>
-      <RightCard/>
+    <div id='right' className='h-full w-3/4 flex gap-5 overflow-x-auto flex-nowrap  px-6 py-8'>
+     {users.map((user, idx) => (
+       <RightCard user={user} key={idx} />
+     ))}
     </div>
   )
 } 
