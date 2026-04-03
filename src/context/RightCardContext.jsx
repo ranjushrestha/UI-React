@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-const RightCardContext = createContext(null)
+export const RightCardContext = createContext(null)
 
 export const RightCardProvider = ({children}) => {
       const users = [
@@ -19,16 +19,16 @@ export const RightCardProvider = ({children}) => {
       intro: "Lorem ipsum dolor sit amet. ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus cum ea. Ipsum, et dolore.",
       tag: "Unreached",
     },
-    {
-      image: "https://plus.unsplash.com/premium_photo-1658506656752-4f1b1c1d5916?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      intro: "Lorem ipsum dolor sit amet. ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus cum ea. Ipsum, et dolore.",
-      tag: "Marginalized",
-    },
-    {
-      image: "https://plus.unsplash.com/premium_photo-1731355865761-69e8d539e328?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      intro: "Lorem ipsum dolor sit amet. ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus cum ea. Ipsum, et dolore.",
-      tag: "Unmet",
-    },
+    // {
+    //   image: "https://plus.unsplash.com/premium_photo-1658506656752-4f1b1c1d5916?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //   intro: "Lorem ipsum dolor sit amet. ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus cum ea. Ipsum, et dolore.",
+    //   tag: "Marginalized",
+    // },
+    // {
+    //   image: "https://plus.unsplash.com/premium_photo-1731355865761-69e8d539e328?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //   intro: "Lorem ipsum dolor sit amet. ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus cum ea. Ipsum, et dolore.",
+    //   tag: "Unmet",
+    // },
   ];
   return (
     <RightCardContext.Provider value={users}>
@@ -36,5 +36,4 @@ export const RightCardProvider = ({children}) => {
     </RightCardContext.Provider>
   )
 }
-
-export const useRightCard = () => useContext(RightCardContext)
+// export const useRightCard = () => useContext(RightCardContext)

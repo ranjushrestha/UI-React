@@ -1,7 +1,6 @@
 import React from 'react'
 import RightCard from './RightCard'
-import { useRightCard } from '../context/RightCardContext'
-
+import useRightCard from "../hooks/useRightCard";
 const RightContent = () => {
   const users = useRightCard()
   return (
