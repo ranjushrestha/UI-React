@@ -1,9 +1,9 @@
-import React from "react";
-import Section1 from "./Section1/Section1";
-import Section2 from "./Section2/Section2";
+import { createContext, useContext } from "react";
 
-const App = () => {
-  const users = [
+const RightCardContext = createContext(null)
+
+export const RightCardProvider = ({children}) => {
+      const users = [
     {
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       intro: "Lorem ipsum dolor sit amet. ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus cum ea. Ipsum, et dolore.",
@@ -31,11 +31,10 @@ const App = () => {
     },
   ];
   return (
-    <div>
-      <Section1 />
-      <Section2 />
-    </div>
-  );
-};
+    <RightCardContext.Provider value={users}>
+        {children}
+    </RightCardContext.Provider>
+  )
+}
 
-export default App;
+export const useRightCard = () => useContext(RightCardContext)
